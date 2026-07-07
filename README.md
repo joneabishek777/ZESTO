@@ -2,7 +2,7 @@
 
 A modern, full-featured food ordering web app built with React — browse a menu, search dishes, manage a cart, and check out, all wrapped in a warm orange/red theme with light & dark mode.
 
-**[Live Demo](#)** · Replace this link once you deploy your own version.
+**[Live Demo](#)** · https://zesto-ten.vercel.app/
 
 ---
 

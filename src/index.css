@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poetsen+One&display=swap');
+
+:root {
+  /* Zesto warm orange/red theme */
+  --color-primary: #ff4d2d;
+  --color-primary-dark: #e0391c;
+  --color-primary-light: #ff8a5c;
+  --color-accent: #ffb703;
+  --color-bg: #fff9f5;
+  --color-surface: #ffffff;
+  --color-text: #2b1c14;
+  --color-text-muted: #7a6a60;
+  --color-border: #f0ded3;
+  --color-dark: #241511;
+  --shadow-sm: 0 2px 8px rgba(43, 28, 20, 0.08);
+  --shadow-md: 0 8px 24px rgba(43, 28, 20, 0.12);
+  --shadow-lg: 0 16px 40px rgba(255, 77, 45, 0.18);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --font-heading: 'Poetsen One', 'Outfit', sans-serif;
+  --font-body: 'Outfit', 'Roboto', sans-serif;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --color-bg: #1a1210;
+  --color-surface: #241a16;
+  --color-text: #fdf2ec;
+  --color-text-muted: #cbb7ad;
+  --color-border: #3a2820;
+  --color-dark: #0f0906;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  width: 80%;
+  margin: auto;
+}
+footer{
+  position: absolute;
+  width: 99vw;
+  left: 0;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}

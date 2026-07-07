@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Poetsen+One&display=swap');
+
+#food-display {
+    scroll-margin-top: 100px;
+}
+
+.food-list-heading{
+    margin-top: 60px;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.no-results {
+    margin-top: 30px;
+    color: var(--color-text-muted);
+    font-size: 18px;
+}
+
+.food-list-component{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.food-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 290px;
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    animation: popIn 0.4s ease both;
+}
+
+.food-img-wrap {
+    overflow: hidden;
+    height: 200px;
+}
+.food-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.food-name-rating{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px 0;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-body);
+    font-size: small;
+}
+.food-name-rating h2 {
+    font-size: 17px;
+    font-weight: 600;
+}
+.food-name-rating img{
+    width: 80px;
+    height: 18px;
+}
+.food-details{
+    padding: 6px 14px 14px;
+    font-family: var(--font-body);
+}
+.food-details p {
+    color: var(--color-text-muted);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+.food-list-component .food-details h3{
+    color: var(--color-primary);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.food-list:hover{
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+.food-list:hover .food-img-wrap img {
+    transform: scale(1.08);
+}
+
+
+.count-buttons-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.when-active{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    align-items: center;
+    position: absolute;
+    top: 165px;
+    right: 10px;
+    padding: 6px 10px;
+    background-color: var(--color-surface);
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
+}
+.when-active img{
+    cursor: pointer;
+    width: 20px;
+}
+.when-single{
+    position: absolute;
+    top: 165px;
+    right: 10px;
+}
+.when-single img{
+    width: 34px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 1100px) {
+    .food-list-component {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 750px) {
+    .food-list-component {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .food-list-component {
+        grid-template-columns: 1fr;
+    }
+}

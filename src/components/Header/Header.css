@@ -1,0 +1,98 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.header-elements{
+    background-image: url('./header_img.png');
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.header-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(36, 21, 17, 0.75) 20%, rgba(36, 21, 17, 0.15) 70%);
+}
+
+.header-content{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 55%;
+    bottom: 10%;
+    gap: 1.3rem;
+    padding-left: 80px;
+    color: white;
+    animation: fadeIn 0.9s ease-in-out;
+}
+
+.header-badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.header-content h2{
+    font-family: var(--font-heading);
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.header-content h2 span {
+    color: var(--color-accent);
+}
+
+.header-content p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    opacity: 0.92;
+    max-width: 90%;
+}
+.header-content button{
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 16px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.header-content button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .header-content {
+        max-width: 85%;
+        padding-left: 30px;
+    }
+    .header-content h2 {
+        font-size: 32px;
+    }
+    .header-elements {
+        height: 60vh;
+    }
+}

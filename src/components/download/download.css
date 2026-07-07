@@ -1,0 +1,40 @@
+.d-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    gap: 1.2rem;
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+    padding: 60px 40px;
+    border-radius: var(--radius-lg);
+    color: white;
+}
+.d-c h1{
+    text-align: center;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 28px;
+}
+.d-c p {
+    text-align: center;
+    opacity: 0.9;
+    max-width: 500px;
+}
+.images-sec{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+.images-sec img{
+    cursor: pointer;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 4px 10px;
+    transition: transform 0.2s ease;
+}
+.images-sec img:hover {
+    transform: translateY(-3px);
+}
